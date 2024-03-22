@@ -71,7 +71,7 @@ const login = async (req, res) => {
           message: "Invalid credentials.",
       });
   }
-  
+
   // check if password is correct
   const validPassword = await bcrypt.compare(password, validEmail.password);
   
@@ -120,7 +120,12 @@ const login = async (req, res) => {
       refreshToken,
       accessToken
   });
-};
+}
+//   const validateToken = async (req, res) => {
+//     const cookies= req.cookie;
+// // show cookies
+// console.log(cookies);
+// };
 
 
 export {register, login};
